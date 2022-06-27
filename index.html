@@ -13,26 +13,42 @@
     <title>Movies</title>
 </head>
 
-<body>
-    <div class="container mb-3">
+<body class="moviesWrapper d-flex mt-3 container">
+
+
+
+
+    <div class="moviesWrapper__left contanier w-25">
+        <form class="form">
+            <select class="form-select bg-danger text-warning border-0" name="movies">
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="thriller">Thriller</option>
+                <option value="horror">Horror</option>
+            </select>
+            <button class="btn btn-danger text-warning mt-3 w-100" type="submit">Search</button>
+        </form>
+        <div class="bookmarkWarapper bg-danger mt-2 rounded-2  p-3 text-center text-warning">
+            <h5 class="bookmarkHeading">Bookmarked Movies:<span class="movie__result-number"></span></h5>
+            <ul class="bookmarkList d-flex align-items-center flex-wrap"></ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="moviesWrapper__right container mb-3">
         <header>
-            <h1 class="mt-5 text-center text-warning bg-danger p-4 rounded-2">Movies Catalog</h1>
-            <p class="movie__result alert alert-info bg-danger text-warning border-0">Search Results: <span
-                    class="movie__result-num"></span>
-            </p>
+            <h1 class="text-center text-warning bg-danger p-4 rounded-2">Movies Catalog</h1>
         </header>
         <main class="movies">
-            <form class="form d-flex w-25">
-                <select class="form-select bg-danger text-warning border-0" name="movies">
-                    <option value="action">Action</option>
-                    <option value="comedy">Comedy</option>
-                    <option value="thriller">Thriller</option>
-                    <option value="horror">Horror</option>
-                </select>
-                <button class="btn btn-danger text-warning mx-2" type="submit">Search</button>
-            </form>
-            <div class="moviesBody mt-4">
-                <ul class="moviesBody__list d-flex flex-wrap justify-content-between p-0"></ul>
+            <div class="movies__right">
+                <p class="movie__result alert alert-info bg-danger text-warning border-0 p-2">Search Results: <span
+                        class="movie__result-num"></span>
+                </p>
+                <div class="moviesBody mt-4">
+                    <ul class="moviesBody__list d-flex flex-wrap justify-content-between p-0"></ul>
+                </div>
             </div>
         </main>
     </div>
